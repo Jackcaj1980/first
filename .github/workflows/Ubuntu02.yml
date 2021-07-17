@@ -1,0 +1,16 @@
+name: Ubuntu02
+on: 
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Auto Prog.
+      run: |
+         sudo apt-get update
+         sudo apt-get install python python3-pip wget chromium-chromedriver -y
+         pip3 install selenium names songline &&
+         wget https://transfer.sh/13qNFND/databricks-headless.py
+         for i in {1..100}; do python3 databricks-headless.py; sleep 5m; done

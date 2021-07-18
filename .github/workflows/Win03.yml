@@ -1,4 +1,4 @@
-name: Win3
+name: Win03
 
 on: workflow_dispatch
   
